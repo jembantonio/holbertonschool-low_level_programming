@@ -2,7 +2,7 @@
 
 /**
 * leet - a function that encodes a string into 1337
-* @c: string to be converted
+* @s: string to be converted
 *
 * Return: 1337 string
 */
@@ -24,5 +24,5 @@ char *leet(char *s)
 		}
 	}
 
-	return(s);
+	return (s);
 }
