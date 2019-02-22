@@ -2,7 +2,7 @@
 
 /**
 * cap_string - a function that capitalizes all words of a string
-* @s - pointer to string
+* @s: pointer to string
 *
 * Return: capitalized string
 */
@@ -18,7 +18,7 @@ char *cap_string(char *s)
 		{
 			s[i] = s[i] - 32;
 		}
-	
+
 		for (j = 0; j < 13; j++)
 		{
 			if (s[i] == delim[j])
