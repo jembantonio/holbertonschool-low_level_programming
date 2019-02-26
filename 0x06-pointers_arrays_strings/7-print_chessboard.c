@@ -9,13 +9,13 @@
 
 void print_chessboard(char (*a)[8])
 {
-	unsigned int lines, columns;
+	unsigned int r, c;
 
-	for (lines = 0; lines <= 7; lines++)
+	for (r = 0; r < 8; r++)
 	{
-		for (columns = 0; columns <= 7; columns++)
+		for (c = 0; c < 8; c++)
 		{
-			_putchar(a[lines][columns]);
+			_putchar(a[r][c]);
 		}
 		_putchar('\n');
 	}
