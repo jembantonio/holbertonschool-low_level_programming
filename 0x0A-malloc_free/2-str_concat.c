@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s1[i]; i++)
 		new[i] = s1[i];
 
-	for (j = 0; new[i] || s2[j]; i++, j++)
+	for (j = 0; j < _strlen(s2); i++, j++)
 		new[i] = s2[j];
 
 	if (new == NULL)
