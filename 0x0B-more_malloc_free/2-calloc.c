@@ -13,13 +13,18 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i, bit;
 	char *arr;
 
+	if (nmemb <= 0)
+		return (NULL);
+
+	if (size <= 0)
+		return (NULL);
+
 	bit = nmemb * size;
-	
+
 	arr = malloc(bit);
 
 	if (arr == NULL)
 		return (NULL);
-
 
 	for (i = 0; i < bit; i++)
 		arr[i] = 0;
