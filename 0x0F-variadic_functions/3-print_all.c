@@ -21,24 +21,26 @@ void print_all(const char * const format, ...)
 	char *separator;
 	va_list args;
 
-	j = 0;
 	separator = "";
 
 	va_start(args, format);
 
+	i = 0;
+	j = 0;
 
-	for (i = 0; format && format[i]; i++)
+	while (format && format[i])
 	{
-		while (list[j].c != NULL)
+		while (list[j].c)
 		{
 			if (format[i] == list[j].c[0])
 			{
 				printf("%s", separator);
 				list[j].function(args);
-				separator = ",";
+				separator = ", ";
 			}
 			j++;
 		}
+		i++;
 		j = 0;
 	}
 	putchar('\n');
