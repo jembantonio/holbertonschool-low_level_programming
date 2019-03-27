@@ -10,15 +10,16 @@
 void free_listint(listint_t *head)
 {
 	listint_t *temp;
+	int i;
 
 	if (head)
 	{
-		temp = head->temp;
-		free(head);
-		head = temp;
+		for (i = 0; head != 0; i++)
+		{
+			temp = head->temp;
+			free(head);
+			head = temp;
+		}
 	}
-
-	if (!head)
-		return;
 }
 
