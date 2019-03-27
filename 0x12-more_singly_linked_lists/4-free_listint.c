@@ -12,7 +12,7 @@ void free_listint(listint_t *head)
 	listint_t *temp;
 	int i;
 
-	if (head)
+	if (head != NULL)
 	{
 		for (i = 0; head != 0; i++)
 		{
