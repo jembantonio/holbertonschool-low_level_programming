@@ -29,7 +29,9 @@ int pop_listint(listint_t **head)
 
 		/* Setting the old head to the next */
 		(*head) = temp;
+
+		return (head_n);
 	}
 
-	return (head_n);
+	return (0);
 }
