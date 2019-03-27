@@ -17,8 +17,8 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (NULL);
 
 	new = malloc(sizeof(listint_t));
-	
-	while (new)
+
+	if (new)
 	{
 		/* inputting data */
 		new->n = n;
@@ -35,7 +35,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		}
 
 		/* else traverse till the last node */
-		for (i =0; last->next; i++)
+		for (i = 0; last->next; i++)
 			last = last->next;
 
 		/* change the address of the last node */
