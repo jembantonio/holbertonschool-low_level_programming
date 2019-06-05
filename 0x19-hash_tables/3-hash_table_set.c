@@ -14,6 +14,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new, *curr;
 	int index;
 
+	new = NULL;
+	curr = NULL;
+
 	if (!ht)
 		return (0);
 	if (!key || !value)
