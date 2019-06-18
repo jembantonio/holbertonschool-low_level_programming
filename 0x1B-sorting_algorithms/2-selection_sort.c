@@ -3,7 +3,7 @@
 /**
  * selection_sort - uses the selection method to sort a doubly linked list
  * @array: a pointer to the first element in the array
- * @size_t: number of elements in the array
+ * @size: number of elements in the array
  *
  * Return: void
  */
@@ -27,9 +27,9 @@ void selection_sort(int *array, size_t size)
 			if (array[min] > array[j])
 				min = j;
 		}
-		
+
 		if (min != 1)
-		{			
+		{
 			swap(&array[i], &array[min]);
 			print_array(array, size);
 		}
@@ -37,6 +37,14 @@ void selection_sort(int *array, size_t size)
 	}
 
 }
+
+/**
+ * swap - swaps two integers in an array
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: void
+ */
 
 void swap(int *a, int *b)
 {
