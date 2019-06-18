@@ -16,10 +16,9 @@ void selection_sort(int *array, size_t size)
 		return;
 
 	i = 0;
-	j = 1;
-
 	while (i < size - 1)
 	{
+		j = i + 1;
 		min = i;
 
 		for (j = i + 1; j < size; j++)
@@ -28,7 +27,7 @@ void selection_sort(int *array, size_t size)
 				min = j;
 		}
 
-		if (min != 1)
+		if (min != i)
 		{
 			swap(&array[i], &array[min]);
 			print_array(array, size);
