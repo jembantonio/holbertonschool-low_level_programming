@@ -52,29 +52,29 @@ void pivot(int *array, int low, int high, int size)
 int partition(int *array, int low, int high, int size)
 {
 	int i, j;
-	int pivot = array[high];
+	int pivot;
 
 	i = low - 1;
 	j = low;
-
+	pivot = array[high];
 
 	while (j < high)
 	{
-		if (array[j] <= pivot)
+		if (array[j] < pivot)
 		{
 			i++;
 			if (i != j)
 			{
-				swap(&array[i], &array[j]);
+				swap(&array[j], &array[i]);
 				print_array(array, size);
 			}
 		}
 		j++;
 	}
 	i++;
-	if (pivot < array[i + 1])
+	if (i != j && array[i] != array[j])
 	{
-		swap(&array[i], &array[high]);
+		swap(&array[high], &array[i]);
 		print_array(array, size);
 	}
 	return (i);
